@@ -11,8 +11,10 @@ var SimpleMailgunAdapter = mailgunOptions => {
     var data = {
       from: mailgunOptions.fromAddress,
       to: mail.to,
+      bcc: mail.bcc,
       subject: mail.subject,
       text: mail.text,
+      html: mail.html
     }
 
     return new Promise((resolve, reject) => {
